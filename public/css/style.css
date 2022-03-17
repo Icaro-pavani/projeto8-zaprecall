@@ -49,7 +49,7 @@ body {
 .topo-perguntas {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    margin-top: 19px;
 }
 
 .logo-perguntas {
@@ -63,7 +63,6 @@ body {
     line-height: 25px;
     letter-spacing: -0.012em;
     color: #fff;
-    margin-bottom: 73px;
     padding-left: 7px;
 }
 
