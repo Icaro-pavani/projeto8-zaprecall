@@ -45,3 +45,28 @@ body {
     line-height: 14px;
     color: #d70900;
 }
+
+.topo-perguntas {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.logo-perguntas {
+    width: 26px;
+    height: 30px;
+}
+
+.topo-perguntas h2{
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.012em;
+    color: #fff;
+    margin-bottom: 73px;
+    padding-left: 7px;
+}
+
+.escondido {
+    display: none;
+}
