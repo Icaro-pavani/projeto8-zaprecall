@@ -1,6 +1,13 @@
+import React from "react";
 import Pergunta from "./Pergunta";
 
+import embaralhar from "./embaralhar";
+
 export default function TelaPerguntas(props) {
+    const deck = props.deck;
+    embaralhar(deck);
+    console.log(deck);
+
     return (
         <div className="tela-perguntas">
             <div className="topo-perguntas">
@@ -9,7 +16,7 @@ export default function TelaPerguntas(props) {
             </div>
 
             <div className="perguntas">
-                <Pergunta mostrarPergunta={props.mostrarPergunta} index={props.index}/>
+                {deck.map((carta, index) => <Pergunta key={index + 1} mostrarPergunta={props.mostrarPergunta} index={index + 1}/>)}
             </div>
 
 
