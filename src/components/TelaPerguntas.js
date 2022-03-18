@@ -16,7 +16,7 @@ export default function TelaPerguntas(props) {
             </div>
 
             <div className="perguntas">
-                {deck.map((carta, index) => <Pergunta key={index + 1} mostrarPergunta={props.mostrarPergunta} index={index + 1}/>)}
+                {deck.map((carta, index) => <Pergunta key={index + 1} card={carta} index={index + 1}/>)}
             </div>
 
 
