@@ -3,7 +3,7 @@ import Icone from "./Icone";
 import Card from "./Card";
 
 export default function Pergunta(props) {
-    const {acuracia, pergunta} = props.card;
+    const {acuracia, pergunta, resposta} = props.card;
     const {index} = props;
 
     const [mostrarCard, setMostrarCard] = React.useState(false);
@@ -22,6 +22,6 @@ export default function Pergunta(props) {
             </div>
         )
     } else {
-        return (<Card pergunta={pergunta} />)
+        return (<Card pergunta={pergunta} resposta={resposta} />)
     }
 }

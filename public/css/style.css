@@ -116,8 +116,9 @@ body {
 }
 
 .pergunta-card {
+    box-sizing: border-box;
     width: 182px;
-    height: 80px;
+    min-height: 80px;
     position: relative;
     background-color: #ffffd4;
     border-radius: 5px;
@@ -140,6 +141,37 @@ body {
     color: #333;
 }
 
-.escondido {
-    display: none;
+.botoes {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 12px;
+    padding-bottom: 3px;
+}
+
+.botoes button {
+    width: 55px;
+    height: 24px;
+    font-family: 'Recursive', sans-serif;
+    font-size: 7px;
+    color: #fff;
+    padding: 0;
+}
+
+.botao-erro {
+    background-color: #ff3030;
+    border: none;
+    border-radius: 5px;
+}
+
+.botao-proximo {
+    background-color: #ff922e;
+    border: none;
+    border-radius: 5px;
+}
+
+.botao-acerto {
+    background-color: #2fbe34;
+    border: none;
+    border-radius: 5px;
 }
