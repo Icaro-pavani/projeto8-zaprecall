@@ -4,7 +4,7 @@ import Card from "./Card";
 
 export default function Pergunta(props) {
     const {acuracia, pergunta, resposta} = props.card;
-    const {index} = props;
+    const {index, adicionarPerguntaRespondida} = props;
 
     const [mostrarCard, setMostrarCard] = React.useState(false);
 
@@ -19,6 +19,7 @@ export default function Pergunta(props) {
     function escolherResposta(escolha) {
         setRespostaEscolhida(escolha);
         setMostrarCard(false);
+        adicionarPerguntaRespondida(escolha);
     }
     
     if (!mostrarCard){

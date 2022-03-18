@@ -1,12 +1,20 @@
 import React from "react";
 import Pergunta from "./Pergunta";
+import Bottom from "./Bottom";
 
 import embaralhar from "./embaralhar";
 
 export default function TelaPerguntas(props) {
     const deck = props.deck;
     embaralhar(deck);
-    console.log(deck);
+
+    const [perguntasRespondidas, setPerguntasRespondidas] = React.useState(0);
+    const [iconesPerguntasRespondidas, setIconesPerguntasRespondidas] = React.useState([]);
+
+    function adicionarPerguntaRespondida(escolha){
+        setPerguntasRespondidas(perguntasRespondidas + 1);
+        setIconesPerguntasRespondidas([...iconesPerguntasRespondidas, escolha]);
+    }
 
     return (
         <div className="tela-perguntas">
@@ -16,13 +24,19 @@ export default function TelaPerguntas(props) {
             </div>
 
             <div className="perguntas">
-                {deck.map((carta, index) => <Pergunta key={index + 1} card={carta} index={index + 1}/>)}
+                {deck.map((carta, index) => {
+                    return (
+                        <Pergunta 
+                            key={index + 1} 
+                            card={carta} 
+                            index={index + 1} 
+                            adicionarPerguntaRespondida={adicionarPerguntaRespondida} 
+                        />
+                    )
+                })}
             </div>
 
-
-            <div className="bottom-perguntas">
-                <h4>0/{deck.length} CONCLUÍDOS</h4>
-            </div>
+            <Bottom perguntasRespondidas={perguntasRespondidas} totalPerguntas={deck.length} iconesRespondidas={iconesPerguntasRespondidas} />
         </div>
     )
 }
