@@ -94,6 +94,24 @@ body {
     --ionicon-stroke-width: 42px;
 }
 
+ion-icon.acerto,
+.pergunta .acerto {
+    color: #2fbe34;
+    text-decoration: line-through;
+}
+
+ion-icon.proximo,
+.pergunta .proximo {
+    color: #ff922e;
+    text-decoration: line-through;
+}
+
+ion-icon.erro,
+.pergunta .erro {
+    color: #ff3030;
+    text-decoration: line-through;
+}
+
 .bottom-perguntas {
     font-family: 'Recursive', sans-serif;
     position: fixed;

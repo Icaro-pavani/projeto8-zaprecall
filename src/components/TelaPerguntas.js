@@ -21,7 +21,7 @@ export default function TelaPerguntas(props) {
 
 
             <div className="bottom-perguntas">
-                <h4>0/4 CONCLUÍDOS</h4>
+                <h4>0/{deck.length} CONCLUÍDOS</h4>
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Card(props) {
-    const {pergunta, resposta} = props;
+    const {pergunta, resposta, escolherResposta} = props;
 
     const [mostrarResposta, setMostrarResposta] = React.useState(false);
 
@@ -17,9 +17,9 @@ export default function Card(props) {
             <div className="pergunta-card">
                 <p>{resposta}</p>
                 <div className="botoes">
-                    <button className="botao-erro">Não lembrei</button>
-                    <button className="botao-proximo">Quase não lembrei!</button>
-                    <button className="botao-acerto">Zap!</button>
+                    <button className="botao-erro" onClick={() => escolherResposta("erro")}>Não lembrei</button>
+                    <button className="botao-proximo" onClick={() => escolherResposta("proximo")}>Quase não lembrei!</button>
+                    <button className="botao-acerto" onClick={() => escolherResposta("acerto")}>Zap!</button>
                 </div>
             </div>            
         )

@@ -13,15 +13,22 @@ export default function Pergunta(props) {
             setMostrarCard(true);
         }
     }
+
+    const [respostaEscolhida, setRespostaEscolhida] = React.useState(acuracia);
+    
+    function escolherResposta(escolha) {
+        setRespostaEscolhida(escolha);
+        setMostrarCard(false);
+    }
     
     if (!mostrarCard){
         return (
-            <div className="pergunta" onClick={() => mostrarQuestaoCard(acuracia)}>
-                <h3 className={acuracia}>Pergunta {index}</h3>
-                <Icone acuracia={acuracia} />
+            <div className="pergunta" onClick={() => mostrarQuestaoCard(respostaEscolhida)}>
+                <h3 className={respostaEscolhida}>Pergunta {index}</h3>
+                <Icone acuracia={respostaEscolhida} />
             </div>
         )
     } else {
-        return (<Card pergunta={pergunta} resposta={resposta} />)
+        return (<Card pergunta={pergunta} resposta={resposta} escolherResposta={escolherResposta} />)
     }
 }
