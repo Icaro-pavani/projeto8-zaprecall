@@ -6,7 +6,7 @@ import TelaPerguntas from './components/TelaPerguntas';
 
 
 function App() {
-  const [abrirDeck, setAbrirDeck] = React.useState(true);
+  const [abrirDeck, setAbrirDeck] = React.useState(false);
 
   function acionaAbrirDeck() {
     setAbrirDeck(true);

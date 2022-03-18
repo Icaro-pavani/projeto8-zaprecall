@@ -115,6 +115,31 @@ body {
     color: #333;
 }
 
+.pergunta-card {
+    width: 182px;
+    height: 80px;
+    position: relative;
+    background-color: #ffffd4;
+    border-radius: 5px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    margin: 0 auto 5px;
+    padding-top: 13px;
+}
+
+.pergunta-card img {
+    position: absolute;
+    bottom: 7px;
+    right: 5px;
+    width: 20px;
+}
+
+.pergunta-card p {
+    margin-left: 6px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333;
+}
+
 .escondido {
     display: none;
 }
