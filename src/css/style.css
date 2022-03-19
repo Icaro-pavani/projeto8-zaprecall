@@ -257,6 +257,8 @@ ion-icon.error,
     background-color: #fff;
     color: #fb6b6b;
     margin-bottom: 18px;
+    margin-top: 18px;
+    padding-left: 10px;
 }
 
 input:focus {
@@ -272,4 +274,31 @@ button.blocked {
     color: #c0c0c0;
     background-color: #e8e8e8;
     border: none;
+}
+
+select {
+    width: 246px;
+    height: 43px;
+    background-color: #fff;
+    border: none;
+    color: #adadad;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 5px;
+    padding-left: 6px;
+}
+
+select:focus {
+    outline: 0;
+    opacity: 0.9;
+    color: #fb6b6b;
+}
+
+.start-screen p {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #fff;
+
 }

@@ -17,7 +17,7 @@ export default function Bottom(props) {
                     {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
                 </div>
             </div>
-        )
+        );
     } else {
         return (
             (correctAnswers < zapGoal) ? (
