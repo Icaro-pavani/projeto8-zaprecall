@@ -1,4 +1,5 @@
 import Icon from "./Icon";
+import BottomResult from "./BottomResult";
 import party from "./../assets/party.png";
 import sad from "./../assets/sad.png";
 
@@ -15,39 +16,26 @@ export default function Bottom(props) {
             </div>
         )
     } else {
-        if (answeredIcons.includes("error")){
-            return (
-                <div className="bottom-end-questions">
-                    <div className="result">
-                        <img src={sad} alt="sad" />
-                        <h2>PUTZ!</h2>
-                    </div>
-                    <h4>Ainda faltaram alguns... Mas não desanime!</h4>
-                    <div className="bottom-questions">
-                        <h4>{answeredQuestions}/{totalQuestions} CONCLUÍDOS</h4>
-                        <div className="bottom-icons">
-                            {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
-                        </div>
-                    </div>
-                </div>
+        return (
+            answeredIcons.includes("error") ? (
+                <BottomResult 
+                answeredQuestions={answeredQuestions}
+                totalQuestions={totalQuestions}
+                answeredIcons={answeredIcons}
+                resultTitle="PUTZ!" 
+                resultMessage="Ainda faltaram alguns... Mas não desanime!" 
+                img={sad}
+                imgAlt="sad" />
+            ) : (
+                <BottomResult 
+                answeredQuestions={answeredQuestions}
+                totalQuestions={totalQuestions}
+                answeredIcons={answeredIcons}
+                resultTitle="PARABÉNS!" 
+                resultMessage="Você não esqueceu de nenhum flashcard!" 
+                img={party}
+                imgAlt="party" />
             )
-        } else {
-            return (
-                <div className="bottom-end-questions">
-                    <div className="result">
-                        <img src={party} alt="party" />
-                        <h2>PARABÉNS!</h2>
-                    </div>
-                    <h4>Você não esqueceu de nenhum flashcard!</h4>
-                    <div className="bottom-questions-result">
-                        <h4>{answeredQuestions}/{totalQuestions} CONCLUÍDOS</h4>
-                        <div className="bottom-icons">
-                            {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
-                        </div>
-                    </div>
-                </div>
-            )
-        }
-        
+        );    
     }
 }
