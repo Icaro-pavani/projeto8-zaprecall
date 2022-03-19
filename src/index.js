@@ -28,7 +28,7 @@ function App() {
 
   return (
       <>
-        {!openDeck ? <StartScreen fncOpenDeck={activateOpenDeck}/> : <QuestionsScreen deck={deckReact}/>}
+        {!openDeck ? <StartScreen fncOpenDeck={activateOpenDeck}/> : <QuestionsScreen deck={deckReact} setOpenDeck={setOpenDeck} />}
       </>
   )
 }

@@ -1,7 +1,7 @@
 import Icon from "./Icon";
 
 export default function BottomResult(props) {
-    const {answeredQuestions, totalQuestions, answeredIcons, resultTitle, resultMessage, img, imgAlt} = props;
+    const {answeredQuestions, totalQuestions, answeredIcons, resultTitle, resultMessage, img, imgAlt, resetZap} = props;
     return (
         <div className="bottom-end-questions">
             <div className="result">
@@ -15,6 +15,7 @@ export default function BottomResult(props) {
                     {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
                 </div>
             </div>
+            <button className="reset-button" onClick={resetZap}>REINICIAR RECALL</button>
         </div>
     )
 }

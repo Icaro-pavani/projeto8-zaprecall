@@ -4,7 +4,7 @@ import party from "./../assets/party.png";
 import sad from "./../assets/sad.png";
 
 export default function Bottom(props) {
-    const {answeredQuestions, totalQuestions, answeredIcons} = props;
+    const {answeredQuestions, totalQuestions, answeredIcons, resetZap} = props;
 
     if (answeredQuestions < totalQuestions){
         return (
@@ -25,7 +25,8 @@ export default function Bottom(props) {
                 resultTitle="PUTZ!" 
                 resultMessage="Ainda faltaram alguns... Mas não desanime!" 
                 img={sad}
-                imgAlt="sad" />
+                imgAlt="sad"
+                resetZap={resetZap} />
             ) : (
                 <BottomResult 
                 answeredQuestions={answeredQuestions}
@@ -34,7 +35,8 @@ export default function Bottom(props) {
                 resultTitle="PARABÉNS!" 
                 resultMessage="Você não esqueceu de nenhum flashcard!" 
                 img={party}
-                imgAlt="party" />
+                imgAlt="party"
+                resetZap={resetZap} />
             )
         );    
     }

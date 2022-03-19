@@ -133,10 +133,11 @@ ion-icon.error,
 }
 
 .bottom-end-questions {
-    height: 171px;
+    height: 244px;
     justify-content: space-between;
     padding-top: 15px;
     font-size: 18px;
+    padding: 22px 0 22px;
 }
 
 .bottom-end-questions h2 {
@@ -232,4 +233,15 @@ ion-icon.error,
     background-color: #2fbe34;
     border: none;
     border-radius: 5px;
+}
+
+.reset-button {
+    width: 167px;
+    height: 32px;
+    background-color: #fb6b6b;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+    border: none;
 }

@@ -3,11 +3,11 @@ import QuestionsTop from "./QuestionsTop";
 import Question from "./Question";
 import Bottom from "./Bottom";
 
-import embaralhar from "./embaralhar";
+import shuffle from "./shuffle";
 
 export default function QuestionsScreen(props) {
-    const {deck} = props;
-    embaralhar(deck);
+    const {deck, setOpenDeck} = props;
+    shuffle(deck);
 
     const [answeredQuestions, setAnsweredQuestions] = React.useState(0);
     const [answeredQuestionsIcons, setAnsweredQuestionsIcons] = React.useState([]);
@@ -15,6 +15,12 @@ export default function QuestionsScreen(props) {
     function addAnsweredQuestion(choice){
         setAnsweredQuestions(answeredQuestions + 1);
         setAnsweredQuestionsIcons([...answeredQuestionsIcons, choice]);
+    }
+
+    function resetZap() {
+        setAnsweredQuestions(0);
+        setAnsweredQuestionsIcons([]);
+        setOpenDeck(false);
     }
 
     return (
@@ -34,7 +40,11 @@ export default function QuestionsScreen(props) {
                 })}
             </div>
 
-            <Bottom answeredQuestions={answeredQuestions} totalQuestions={deck.length} answeredIcons={answeredQuestionsIcons} />
+            <Bottom 
+            answeredQuestions={answeredQuestions} 
+            totalQuestions={deck.length} 
+            answeredIcons={answeredQuestionsIcons}
+            resetZap={resetZap} />
         </div>
     )
 }
