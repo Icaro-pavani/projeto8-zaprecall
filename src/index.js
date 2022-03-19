@@ -4,6 +4,8 @@ import React from 'react';
 import "./css/reset.css";
 import "./css/style.css";
 
+import shuffle from './components/shuffle';
+
 import StartScreen from './components/StartScreen';
 import QuestionsScreen from './components/QuestionsScreen';
 
@@ -17,7 +19,7 @@ function App() {
     if (event.target.value === "React"){
       setDeck([...deckReact]);
     } else if (event.target.value === "Recall veícular"){
-      setDeck([...deckRecallVeicular]);
+      setDeck([...shuffle(deckRecallVeicular)]);
     }
   }
 

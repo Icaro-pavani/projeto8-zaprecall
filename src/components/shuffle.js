@@ -1,5 +1,5 @@
 export default function shuffle(deck){
-    deck.sort(mix);
+    return deck.sort(mix);
 }
 
 function mix() {

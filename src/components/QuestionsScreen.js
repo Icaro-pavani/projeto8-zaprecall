@@ -3,11 +3,12 @@ import QuestionsTop from "./QuestionsTop";
 import Question from "./Question";
 import Bottom from "./Bottom";
 
-import shuffle from "./shuffle";
+// import shuffle from "./shuffle";
 
 export default function QuestionsScreen(props) {
     const {deck, setOpenDeck, zapGoal, setZapGoal, setDeck} = props;
-    shuffle(deck);
+    // shuffle(deck);
+    // console.log(deck);
 
     const [answeredQuestions, setAnsweredQuestions] = React.useState(0);
     const [answeredQuestionsIcons, setAnsweredQuestionsIcons] = React.useState([]);
@@ -43,11 +44,12 @@ export default function QuestionsScreen(props) {
             </div>
 
             <Bottom 
-            answeredQuestions={answeredQuestions} 
-            totalQuestions={deck.length} 
-            answeredIcons={answeredQuestionsIcons}
-            resetZap={resetZap}
-            zapGoal={zapGoal} />
+                answeredQuestions={answeredQuestions} 
+                totalQuestions={deck.length} 
+                answeredIcons={answeredQuestionsIcons}
+                resetZap={resetZap}
+                zapGoal={zapGoal} 
+            />
         </div>
     )
 }

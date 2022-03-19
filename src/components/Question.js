@@ -3,8 +3,10 @@ import Icon from "./Icon";
 import Card from "./Card";
 
 export default function Question(props) {
-    const {question, answer} = props.card;
+    const {card} = props;
     const {index, addAnsweredQuestion} = props;
+    const {question, answer} = card;
+    // console.log(card);
 
     const [showCard, setShowCard] = React.useState(false);
     const [chosenAnswer, setChosenAnswer] = React.useState("");
