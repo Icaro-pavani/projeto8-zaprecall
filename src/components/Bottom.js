@@ -1,41 +1,43 @@
-import Icone from "./Icone";
+import Icon from "./Icon";
+import party from "./../assets/party.png";
+import sad from "./../assets/sad.png";
 
 export default function Bottom(props) {
-    const {perguntasRespondidas, totalPerguntas, iconesRespondidas} = props;
+    const {answeredQuestions, totalQuestions, answeredIcons} = props;
 
-    if (perguntasRespondidas < totalPerguntas){
+    if (answeredQuestions < totalQuestions){
         return (
-            <div className="bottom-perguntas">
-                <h4>{perguntasRespondidas}/{totalPerguntas} CONCLUÍDOS</h4>
-                <div className="icones-bottom">
-                    {iconesRespondidas.map((escolha, index) => <Icone key={index} acuracia={escolha} />)}
+            <div className="bottom-questions">
+                <h4>{answeredQuestions}/{totalQuestions} CONCLUÍDOS</h4>
+                <div className="bottom-icons">
+                    {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
                 </div>
             </div>
         )
     } else {
-        if (iconesRespondidas.includes("erro")){
+        if (answeredIcons.includes("error")){
             return (
-                <div className="bottom-fim-perguntas">
-                    <div className="resultado">
-                        <img src="imagens/sad.png" alt="sad" />
+                <div className="bottom-end-questions">
+                    <div className="result">
+                        <img src={sad} alt="sad" />
                         <h2>PUTZ!</h2>
                     </div>
                     <h4>Ainda faltaram alguns... Mas não desanime!</h4>
-                    <div className="icones-bottom">
-                        {iconesRespondidas.map((escolha, index) => <Icone key={index} acuracia={escolha} />)}
+                    <div className="icons-bottom">
+                        {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
                     </div>
                 </div>
             )
         } else {
             return (
-                <div className="bottom-fim-perguntas">
-                    <div className="resultado">
-                        <img src="imagens/party.png" alt="party" />
+                <div className="bottom-end-questions">
+                    <div className="result">
+                        <img src={party} alt="party" />
                         <h2>PARABÉNS!</h2>
                     </div>
                     <h4>Você não esqueceu de nenhum flashcard!</h4>
-                    <div className="icones-bottom">
-                        {iconesRespondidas.map((escolha, index) => <Icone key={index} acuracia={escolha} />)}
+                    <div className="icons-bottom">
+                        {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
                     </div>
                 </div>
             )

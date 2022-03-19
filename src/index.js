@@ -1,31 +1,34 @@
 import ReactDom from 'react-dom';
 import React from 'react';
 
-import TelaInicio from './components/TelaInicio';
-import TelaPerguntas from './components/TelaPerguntas';
+import "./css/reset.css";
+import "./css/style.css";
+
+import StartScreen from './components/StartScreen';
+import QuestionsScreen from './components/QuestionsScreen';
 
 
 function App() {
-  const [abrirDeck, setAbrirDeck] = React.useState(false);
+  const [openDeck, setOpenDeck] = React.useState(false);
 
-  function acionaAbrirDeck() {
-    setAbrirDeck(true);
+  function activateOpenDeck() {
+    setOpenDeck(true);
   }
 
   const deckReact = [
-    {pergunta: "O que é JSX?", resposta: "Uma extensão de linguagem do JavaScript", acuracia: ""},
-    {pergunta: "O React é __", resposta: "uma biblioteca JavaScript para construção de interfaces", acuracia: ""},
-    {pergunta: "Componentes devem iniciar com __", resposta: "letra maiúscula", acuracia: ""},
-    {pergunta: "Podemos colocar __ dentro do JSX", resposta: "expressões", acuracia: ""},
-    {pergunta: "O ReactDOM nos ajuda __", resposta: "interagindo com a DOM para colocar componentes React na mesma", acuracia: ""},
-    {pergunta: "Usamos o npm para __", resposta: "gerenciar os pacotes necessários e suas dependências", acuracia: ""},
-    {pergunta: "Usamos props para __", resposta: "passar diferentes informações para componentes", acuracia: ""},
-    {pergunta: "Usamos estado (state) para __", resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente", acuracia: ""},
+    {question: "O que é JSX?", answer: "Uma extensão de linguagem do JavaScript"},
+    {question: "O React é __", answer: "uma biblioteca JavaScript para construção de interfaces"},
+    {question: "Componentes devem iniciar com __", answer: "letra maiúscula"},
+    {question: "Podemos colocar __ dentro do JSX", answer: "expressões"},
+    {question: "O ReactDOM nos ajuda __", answer: "interagindo com a DOM para colocar componentes React na mesma"},
+    {question: "Usamos o npm para __", answer: "gerenciar os pacotes necessários e suas dependências"},
+    {question: "Usamos props para __", answer: "passar diferentes informações para componentes"},
+    {question: "Usamos estado (state) para __", answer: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"},
   ];
 
   return (
       <>
-        {!abrirDeck ? <TelaInicio fncAbrirDeck={acionaAbrirDeck}/> : <TelaPerguntas deck={deckReact}/>}
+        {!openDeck ? <StartScreen fncOpenDeck={activateOpenDeck}/> : <QuestionsScreen deck={deckReact}/>}
       </>
   )
 }

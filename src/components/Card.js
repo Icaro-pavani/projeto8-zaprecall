@@ -1,25 +1,26 @@
 import React from "react";
+import setinha from "./../assets/setinha.png"
 
 export default function Card(props) {
-    const {pergunta, resposta, escolherResposta} = props;
+    const {question, answer, chooseAnswer} = props;
 
-    const [mostrarResposta, setMostrarResposta] = React.useState(false);
+    const [showAnswer, setShowAnswer] = React.useState(false);
 
-    if (!mostrarResposta){
+    if (!showAnswer){
         return (
-            <div className="pergunta-card">
-                <p>{pergunta}</p>
-                <img src="imagens/setinha.png" alt="seta" onClick={() => setMostrarResposta(true)} />
+            <div className="question-card">
+                <p>{question}</p>
+                <img src={setinha} alt="seta" onClick={() => setShowAnswer(true)} />
             </div>
         )
     } else {
         return (
-            <div className="pergunta-card">
-                <p>{resposta}</p>
-                <div className="botoes">
-                    <button className="botao-erro" onClick={() => escolherResposta("erro")}>Não lembrei</button>
-                    <button className="botao-proximo" onClick={() => escolherResposta("proximo")}>Quase não lembrei!</button>
-                    <button className="botao-acerto" onClick={() => escolherResposta("acerto")}>Zap!</button>
+            <div className="question-card">
+                <p>{answer}</p>
+                <div className="buttons">
+                    <button className="error-button" onClick={() => chooseAnswer("error")}>Não lembrei</button>
+                    <button className="almost-button" onClick={() => chooseAnswer("almost")}>Quase não lembrei!</button>
+                    <button className="right-button" onClick={() => chooseAnswer("right")}>Zap!</button>
                 </div>
             </div>            
         )
