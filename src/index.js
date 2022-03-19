@@ -10,9 +10,14 @@ import QuestionsScreen from './components/QuestionsScreen';
 
 function App() {
   const [openDeck, setOpenDeck] = React.useState(false);
+  const [zapGoal, setZapGoal] = React.useState(0);
 
   function activateOpenDeck() {
     setOpenDeck(true);
+  }
+
+  function getZapGoal(event) {
+    setZapGoal(event.target.value);
   }
 
   const deckReact = [
@@ -28,7 +33,7 @@ function App() {
 
   return (
       <>
-        {!openDeck ? <StartScreen fncOpenDeck={activateOpenDeck}/> : <QuestionsScreen deck={deckReact} setOpenDeck={setOpenDeck} />}
+        {!openDeck ? <StartScreen fncOpenDeck={activateOpenDeck} zapGoal={zapGoal} getZapGoal={getZapGoal} /> : <QuestionsScreen deck={deckReact} setOpenDeck={setOpenDeck} zapGoal={zapGoal} setZapGoal={setZapGoal} />}
       </>
   )
 }

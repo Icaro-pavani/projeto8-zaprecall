@@ -4,7 +4,10 @@ import party from "./../assets/party.png";
 import sad from "./../assets/sad.png";
 
 export default function Bottom(props) {
-    const {answeredQuestions, totalQuestions, answeredIcons, resetZap} = props;
+    const {answeredQuestions, totalQuestions, answeredIcons, resetZap, zapGoal} = props;
+
+    const errors = answeredIcons.filter(answer => answer === "error");
+    const correctAnswers = totalQuestions - errors.length;
 
     if (answeredQuestions < totalQuestions){
         return (
@@ -17,7 +20,7 @@ export default function Bottom(props) {
         )
     } else {
         return (
-            answeredIcons.includes("error") ? (
+            (correctAnswers < zapGoal) ? (
                 <BottomResult 
                 answeredQuestions={answeredQuestions}
                 totalQuestions={totalQuestions}
