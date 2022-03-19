@@ -50,26 +50,27 @@ body {
 .questions-top {
     display: flex;
     justify-content: center;
-    margin-top: 19px;
-    margin-bottom: 37px;
+    align-items: center;
+    margin-top: 42px;
+    margin-bottom: 51px;
 }
 
 .questions-logo {
-    width: 26px;
-    height: 30px;
+    width: 52px;
+    height: 60px;
 }
 
 .questions-top h2{
     font-family: 'Righteous', cursive;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 36px;
+    line-height: 45px;
     letter-spacing: -0.012em;
     color: #fff;
-    padding-left: 7px;
+    padding-left: 20px;
 }
 
 .questions {
-    margin-bottom: 117px;
+    margin-bottom: 250px;
 }
 
 .question {
@@ -78,21 +79,21 @@ body {
     align-items: center;
     font-family: 'Recursive', sans-serif;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
-    width: 182px;
-    height: 40px;
+    font-size: 16px;
+    line-height: 19px;
+    width: 300px;
+    height: 65px;
     background-color: #fff;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-    padding: 0 10px 0 6px;
-    margin: 0 auto 5px;
+    padding: 0 15px 0 15px;
+    margin: 0 auto 25px;
     color: #333;
 }
 
 ion-icon {
-    font-size: 18px;
-    --ionicon-stroke-width: 42px;
+    font-size: 26px;
+    --ionicon-stroke-width: 48px;
 }
 
 ion-icon.right,
@@ -113,17 +114,18 @@ ion-icon.error,
     text-decoration: line-through;
 }
 
+.bottom-questions-result,
 .bottom-end-questions,
 .bottom-questions {
     font-family: 'Recursive', sans-serif;
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 50px;
+    height: 70px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #fff;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
@@ -131,13 +133,28 @@ ion-icon.error,
 }
 
 .bottom-end-questions {
-    height: 112px;
+    height: 171px;
+    justify-content: space-between;
+    padding-top: 15px;
+    font-size: 18px;
 }
 
+.bottom-end-questions h2 {
+    margin-left: 12px;
+}
+
+.bottom-questions-result {
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.bottom-questions-result h4,
 .bottom-questions h4 {
-    font-size: 12px;
-    line-height: 14px;
-    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 6px;
     color: #333;
 }
 
@@ -155,14 +172,14 @@ ion-icon.error,
 
 .question-card {
     box-sizing: border-box;
-    width: 182px;
-    min-height: 80px;
+    width: 299px;
+    min-height: 131px;
     position: relative;
     background-color: #ffffd4;
     border-radius: 5px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
-    margin: 0 auto 5px;
-    padding-top: 13px;
+    margin: 0 auto 25px;
+    padding-top: 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -170,15 +187,15 @@ ion-icon.error,
 
 .question-card img {
     position: absolute;
-    bottom: 7px;
-    right: 5px;
-    width: 20px;
+    bottom: 6px;
+    right: 15px;
+    width: 30px;
 }
 
 .question-card p {
-    margin-left: 6px;
-    font-size: 12px;
-    line-height: 14px;
+    margin-left: 15px;
+    font-size: 18px;
+    line-height: 22px;
     color: #333;
 }
 
@@ -186,17 +203,17 @@ ion-icon.error,
     position: relative;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 12px;
+    margin-top: 25px;
     padding-bottom: 3px;
 }
 
 .buttons button {
-    width: 55px;
-    height: 24px;
+    width: 85px;
+    height: 37px;
     font-family: 'Recursive', sans-serif;
-    font-size: 7px;
+    font-size: 12px;
     color: #fff;
-    padding: 0;
+    padding: 0 3%;
 }
 
 .error-button {

@@ -23,8 +23,11 @@ export default function Bottom(props) {
                         <h2>PUTZ!</h2>
                     </div>
                     <h4>Ainda faltaram alguns... Mas não desanime!</h4>
-                    <div className="icons-bottom">
-                        {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
+                    <div className="bottom-questions">
+                        <h4>{answeredQuestions}/{totalQuestions} CONCLUÍDOS</h4>
+                        <div className="bottom-icons">
+                            {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
+                        </div>
                     </div>
                 </div>
             )
@@ -36,8 +39,11 @@ export default function Bottom(props) {
                         <h2>PARABÉNS!</h2>
                     </div>
                     <h4>Você não esqueceu de nenhum flashcard!</h4>
-                    <div className="icons-bottom">
-                        {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
+                    <div className="bottom-questions-result">
+                        <h4>{answeredQuestions}/{totalQuestions} CONCLUÍDOS</h4>
+                        <div className="bottom-icons">
+                            {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
+                        </div>
                     </div>
                 </div>
             )

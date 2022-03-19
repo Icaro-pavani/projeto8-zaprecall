@@ -1,5 +1,5 @@
 import React from "react";
-import setinha from "./../assets/setinha.png"
+import setinha from "./../assets/setinha.svg"
 
 export default function Card(props) {
     const {question, answer, chooseAnswer} = props;
