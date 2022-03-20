@@ -1,5 +1,4 @@
 import ProgressBottom from "./ProgressBottom";
-import Icon from "./Icon";
 
 export default function BottomResult(props) {
     const {answeredQuestions, totalQuestions, answeredIcons, resultTitle, resultMessage, img, imgAlt, resetZap} = props;
