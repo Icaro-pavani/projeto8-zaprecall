@@ -1,3 +1,4 @@
+import ProgressBottom from "./ProgressBottom";
 import Icon from "./Icon";
 
 export default function BottomResult(props) {
@@ -9,12 +10,11 @@ export default function BottomResult(props) {
                 <h2>{resultTitle}</h2>
             </div>
             <h4>{resultMessage}</h4>
-            <div className="bottom-questions-result">
-                <h4>{answeredQuestions}/{totalQuestions} CONCLUÍDOS</h4>
-                <div className="bottom-icons">
-                    {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
-                </div>
-            </div>
+            <ProgressBottom 
+                answeredQuestions={answeredQuestions} 
+                totalQuestions={totalQuestions} 
+                answeredIcons={answeredIcons} 
+            />
             <button className="reset-button" onClick={resetZap}>REINICIAR RECALL</button>
         </div>
     )

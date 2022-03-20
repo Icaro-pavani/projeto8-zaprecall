@@ -1,4 +1,4 @@
-import Icon from "./Icon";
+import ProgressBottom from "./ProgressBottom";
 import BottomResult from "./BottomResult";
 import party from "./../assets/party.png";
 import sad from "./../assets/sad.png";
@@ -11,12 +11,11 @@ export default function Bottom(props) {
 
     if (answeredQuestions < totalQuestions){
         return (
-            <div className="bottom-questions">
-                <h4>{answeredQuestions}/{totalQuestions} CONCLUÍDOS</h4>
-                <div className="bottom-icons">
-                    {answeredIcons.map((choice, index) => <Icon key={index} choice={choice} />)}
-                </div>
-            </div>
+            <ProgressBottom 
+                answeredQuestions={answeredQuestions} 
+                totalQuestions={totalQuestions} 
+                answeredIcons={answeredIcons} 
+            />
         );
     } else {
         return (
