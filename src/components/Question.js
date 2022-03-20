@@ -6,7 +6,6 @@ export default function Question(props) {
     const {card} = props;
     const {index, addAnsweredQuestion} = props;
     const {question, answer} = card;
-    // console.log(card);
 
     const [showCard, setShowCard] = React.useState(false);
     const [chosenAnswer, setChosenAnswer] = React.useState("");

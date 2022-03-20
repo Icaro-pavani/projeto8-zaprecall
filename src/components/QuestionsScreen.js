@@ -3,12 +3,9 @@ import QuestionsTop from "./QuestionsTop";
 import Question from "./Question";
 import Bottom from "./Bottom";
 
-// import shuffle from "./shuffle";
 
 export default function QuestionsScreen(props) {
     const {deck, setOpenDeck, zapGoal, setZapGoal, setDeck} = props;
-    // shuffle(deck);
-    // console.log(deck);
 
     const [answeredQuestions, setAnsweredQuestions] = React.useState(0);
     const [answeredQuestionsIcons, setAnsweredQuestionsIcons] = React.useState([]);

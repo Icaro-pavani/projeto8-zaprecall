@@ -12,7 +12,7 @@ export default function Card(props) {
                 <p>{question}</p>
                 <img src={setinha} alt="seta" onClick={() => setShowAnswer(true)} />
             </div>
-        )
+        );
     } else {
         return (
             <div className="question-card">
@@ -23,6 +23,6 @@ export default function Card(props) {
                     <button className="right-button" onClick={() => chooseAnswer("right")}>Zap!</button>
                 </div>
             </div>            
-        )
+        );
     }
 }

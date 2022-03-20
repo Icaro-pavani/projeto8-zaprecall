@@ -17,7 +17,7 @@ function App() {
 
   function getDeck(event) {
     if (event.target.value === "React"){
-      setDeck([...deckReact]);
+      setDeck([...shuffle(deckReact)]);
     } else if (event.target.value === "Recall veícular"){
       setDeck([...shuffle(deckRecallVeicular)]);
     }
@@ -45,13 +45,13 @@ function App() {
   const deckRecallVeicular = [
     {question: "Como é feita a comunicação de um recall veícular?", answer: "Por meio de comunicação padrões: internet, TV, rádio, jornais"},
     {question: "Qual outro nome para recall veícular?", answer: "Aviso de Risco"},
-    {question: "O que é recall branco?", answer: "É um recalkl voluntário"},
+    {question: "O que é recall branco?", answer: "É um recall voluntário"},
     {question: "Recall veícular pode ser feito onde quizer?", answer: "Sim, mas o custo é pago pelo proprietário"},
     {question: "Recall veícular gera custo para o proprietário?", answer: "Não"},
     {question: "Recall veícular tem prazo de validade?", answer: "Não"},
     {question: "Existe site para verificação de recall por veículo?", answer: "Sim, o site da montadora ou Denatran"},
     {question: "Quando começou a prática de recall veícular?", answer: "Na década de 60 nos EUA"},
-    {question: "O que fazer caso a oficnica especializada demore para substituir a peça com defeito?", answer:"Acionar o Procon"}
+    {question: "O que fazer caso a oficina especializada demore para substituir a peça com defeito?", answer:"Acionar o Procon"}
   ];
 
   return (

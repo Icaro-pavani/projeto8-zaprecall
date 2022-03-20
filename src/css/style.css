@@ -1,15 +1,19 @@
+/* Fixes the size of the elements */
 * {
     box-sizing: border-box;
 }
 
+/* Degine the standard font to the page */
 html {
     font-family: 'Recursive', sans-serif;
 }
 
+/* Backgroundo color of the page */
 body {
     background-color: #fb6b6b;
 }
 
+/* Layout of the start screen */
 .start-screen {
     width: 100%;
     min-height: 100vh;
@@ -47,6 +51,7 @@ body {
     color: #d70900;
 }
 
+/* Layout of the questions/cards screen */
 .questions-top {
     display: flex;
     justify-content: center;
@@ -67,6 +72,7 @@ body {
     letter-spacing: -0.012em;
     color: #fff;
     padding-left: 20px;
+    transform: rotate(0.58deg);
 }
 
 .questions {
@@ -137,6 +143,7 @@ ion-icon.error,
     justify-content: space-between;
     padding-top: 15px;
     font-size: 18px;
+    line-height: 22px;
     padding: 22px 0 22px;
 }
 
@@ -155,7 +162,6 @@ ion-icon.error,
 .bottom-questions h4 {
     font-size: 18px;
     line-height: 22px;
-    margin-bottom: 6px;
     color: #333;
 }
 
@@ -173,7 +179,7 @@ ion-icon.error,
 
 .question-card {
     box-sizing: border-box;
-    width: 299px;
+    width: 300px;
     min-height: 131px;
     position: relative;
     background-color: #ffffd4;
@@ -301,4 +307,104 @@ select:focus {
     margin-top: 5px;
     color: #fff;
 
+}
+
+/* Layout for larger screens */
+@media (min-width: 600px) {
+    .questions-logo {
+        width: 89px;
+        height: 100px;
+    }
+
+    .questions-top h2{
+        font-size: 64px;
+        line-height: 79px;
+    }
+
+    .questions {
+        margin-bottom: 350px;
+    }
+
+    .question {
+        width: 567px;
+        height: 92px;
+        font-size: 24px;
+        line-height: 29px;
+        padding: 0 23px 0 23px;
+    }
+
+    ion-icon {
+        font-size: 42px;
+        --ionicon-stroke-width: 52px;
+    }
+
+    .question-card{
+        width: 567px;
+        min-height: 231px;
+        padding-top: 25px;
+    }
+
+    .question-card img {
+        width: 48px;
+        bottom: 10px;
+        right: 20px;
+    }
+
+    .question-card p {
+        font-size: 26px;
+        line-height: 31px;
+        margin-left: 20px;
+    }
+
+    .buttons {
+        margin-top: 45px;
+        padding-bottom: 13px;
+    }
+    
+    .buttons button {
+        width: 150px;
+        height: 67px;
+        font-family: 'Recursive', sans-serif;
+        font-size: 18px;
+        color: #fff;
+        padding: 0 5%;
+    }
+
+    .bottom-questions-result,
+    .bottom-end-questions,
+    .bottom-questions {
+        height: 118px;
+        width: 100%;
+        padding: 10px 0 8px;
+    }
+
+    .bottom-end-questions {
+        height: 344px;
+        padding-top: 15px;
+        font-size: 32px;
+        line-height: 42px;
+        padding: 22px 0 22px;
+    }
+
+    .bottom-end-questions h2 {
+        margin-left: 12px;
+    }
+
+    .bottom-questions-result h4,
+    .bottom-questions h4 {
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 0px;
+    }
+
+    .bottom-end-questions h4{
+        padding: 0 35%;
+    }
+
+    .reset-button {
+        width: 250px;
+        height: 50px;
+        font-size: 20px;
+        line-height: 25px;
+    }
 }
