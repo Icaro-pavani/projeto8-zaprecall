@@ -4,4 +4,4 @@ This project emulates recall cards of two themes included inside its code. In th
 
 <center>Link to the deployment of the application</center>
 
-<center>[ZapRecall](https://projeto8-zaprecall-euvab08eo-icaro-pavani.vercel.app)</center>
+<center>(ZapRecall)[https://projeto8-zaprecall-euvab08eo-icaro-pavani.vercel.app]</center>
